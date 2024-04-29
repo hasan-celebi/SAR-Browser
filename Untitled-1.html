@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telefon SAR Değeri Tarayıcı Projesi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SAR Tarayıcı&nbsp;</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Marka girin...">
+      <input type="text" id="searchInput2" placeholder="Model girin...">
+
+      <button id="searchButton">Ara</button>
+    </div>
+    <select id="brandSelect">
+      <option value="">Marka Seçiniz</option>
+      <option value="Samsung">Samsung</option>
+      <option value="Apple">Apple</option>
+      <option value="Xiaomi">Xiaomi</option>
+    </select>
+    <select id="modelSelect">
+      <option value="">Model Seçiniz</option>
+    </select>
+    <button id="getSarButton">SAR Değerini Getir</button>
+    <div id="sarValue"></div>
+  </div>
+  <div class="sar-bar-container">
+    <div id="sarBar" class="sar-bar"></div>
+  </div>  
+	 <div class="container">
+        <p>SAR Değeri Nedir?</p>
+        <button id="toggleButton">Daha Fazla Görüntüle</button>
+        <div id="hiddenContent" class="hidden">
+            <p>Özgül emilim oranı veya özgül soğurma oranı (İngilizce: Specific absorption rate) (SAR), radyo frekans (RF) elektromanyetik alana maruz kalındığında beden tarafından soğurulan enerji oranının bir ölçüsüdür. Birim doku kütlesi başına soğurulan güç olarak tanımlanır ve birimi W/kg'dır. SAR ya tüm beden üzerinde ya da küçük bir örnek hacim (genelde 1 g veya 10 g doku) üzerinden ortalaması olarak alınır. </p>
+			<p>SAR, 100 kHz ve 10 Ghz aralığında bulunan alanlara maruz kalma düzeyini ölçmek için kullanılır. Çoğunlukla cep telefonlarından ve MRI taramalarından soğurulan gücü ölçmek için kullanılır. Değerler RF enerjisine maruz kalan vücut kısmının geometrisine ve RF kaynağının tam konumuyla geometrisine büyük oranda bağlıdır. Bu yüzden testler her özgül kaynakla, örneğin bir telefon modeliyle ve cihazın amaçlanan kullanım pozisyonuna uyularak yapılmalıdır. Örneğin, bir cep telefonun SAR değeri ölçülürken, telefon kulağa konuşma pozisyonunda yerleştirilmelidir. SAR değeri kafa üzerinde en yüksek emilim oranına sahip nokta üzerinden ölçülmelidir ki bu nokta cep telefonları için genelde telefonun antenine en yakın noktadır.</p>
+        </div>
+    </div>
+  <footer>
+    <p>Telefon SAR Değeri Tarayıcı Projesi</p>
+    <p>Hasan Hüseyin Çelebi</p>
+    <p>210207047</p>
+  </footer>
+  <script src="script.js"></script>
+	<script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            document.getElementById('hiddenContent').classList.toggle('hidden');
+        });
+
+        document.getElementById('closeButton').addEventListener('click', function() {
+            document.getElementById('hiddenContent').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
