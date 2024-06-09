@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telefon SAR Değeri Tarayıcı Projesi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="avrupa.css">
+</head>
+<body>
+	<h1 align="center">SAR Tarayıcı (Avrupa)</h1>
+	<div class="container">
+		<a href="amerika.html"><img src="abd.png" align="" width="50" alt="abd bayrağı"><h4> ABD SAR Değerleri İçin Tıklayın</h4>
+		</a>
+	</div>
+  <div class="container">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Marka girin...">
+      <input type="text" id="searchInput2" placeholder="Model girin...">
+      <button id="searchButton">Ara</button>
+    </div>
+    <div class="dropdown-container">
+      <select id="brandSelect">
+        <option value="">Marka Seçiniz</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Apple">Apple</option>
+        <option value="Xiaomi">Xiaomi</option>
+		    <option value="Google">Google</option>
+		    <option value="Oneplus">Oneplus</option>
+      </select>
+      <select id="modelSelect">
+        <option value="">Model Seçiniz</option>
+      </select>
+    </div>
+    <button id="getSarButton">SAR Değerini Getir</button>
+    <div id="sarValue"></div>
+    <div class="sar-bar-container">
+      <div id="sarBar" class="sar-bar"></div>
+    </div>
+    <div class="info-container">
+      <button id="toggleButton">Sar Değeri Nedir?</button>
+      <div id="hiddenContent" class="hidden">
+        <p>Özgül emilim oranı veya özgül soğurma oranı (İngilizce: Specific absorption rate) (SAR), radyo frekans (RF) elektromanyetik alana maruz kalındığında beden tarafından soğurulan enerji oranının bir ölçüsüdür. Birim doku kütlesi başına soğurulan güç olarak tanımlanır ve birimi W/kg'dır. SAR ya tüm beden üzerinde ya da küçük bir örnek hacim (genelde 1 g veya 10 g doku) üzerinden ortalaması olarak alınır. </p>
+        <p>SAR, 100 kHz ve 10 Ghz aralığında bulunan alanlara maruz kalma düzeyini ölçmek için kullanılır. Çoğunlukla cep telefonlarından ve MRI taramalarından soğurulan gücü ölçmek için kullanılır. Değerler RF enerjisine maruz kalan vücut kısmının geometrisine ve RF kaynağının tam konumuyla geometrisine büyük oranda bağlıdır. Bu yüzden testler her özgül kaynakla, örneğin bir telefon modeliyle ve cihazın amaçlanan kullanım pozisyonuna uyularak yapılmalıdır. Örneğin, bir cep telefonun SAR değeri ölçülürken, telefon kulağa konuşma pozisyonunda yerleştirilmelidir. SAR değeri kafa üzerinde en yüksek emilim oranına sahip nokta üzerinden ölçülmelidir ki bu nokta cep telefonları için genelde telefonun antenine en yakın noktadır.</p>
+      </div>
+    </div>
+  </div>
+  <footer> 
+	  <div class="container">
+    <p>Telefon SAR Değeri Tarayıcı Projesi</p>
+    <p>Hasan Hüseyin Çelebi</p>
+    <p>210207047</p>
+		  <p>2024</p>
+		  </div>
+  </footer>
+  <script src="avrupa.js"></script>
+  <script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+      document.getElementById('hiddenContent').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
